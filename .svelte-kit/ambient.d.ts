@@ -1,5 +1,9 @@
+
 // this file is generated — do not edit it
-/// <reference types = "@sveltejs/kit"/>
+
+
+/// <reference types="@sveltejs/kit" />
+
 /**
  * Environment variables [loaded by Vite](https://vitejs.dev/guide/env-and-mode.html#env-files) from `.env` files and `process.env`. Like [`$env/dynamic/private`](https://kit.svelte.dev/docs/modules#$env-dynamic-private), this module cannot be imported into client-side code. This module only includes variables that _do not_ begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env).
  * 
@@ -20,7 +24,7 @@
  * ```bash
  * MY_FEATURE_FLAG="enabled" npm run dev
  * ```
-*/
+ */
 declare module '$env/static/private' {
 	export const ACSetupSvcPort: string;
 	export const ACSvcPort: string;
@@ -36,6 +40,9 @@ declare module '$env/static/private' {
 	export const DataSpell: string;
 	export const DriverData: string;
 	export const EDITOR: string;
+	export const EFC_16452: string;
+	export const FPS_BROWSER_APP_PROFILE_STRING: string;
+	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -73,7 +80,6 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const NPM_PREFIX_NPM_CLI_JS: string;
 	export const NUMBER_OF_PROCESSORS: string;
-	export const NVIDIAWHITELISTED: string;
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -93,7 +99,7 @@ declare module '$env/static/private' {
 	export const PyCharm: string;
 	export const RlsSvcPort: string;
 	export const SDK: string;
-	export const SHIM_MCCOMPAT: string;
+	export const SESSIONNAME: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
 	export const TEMP: string;
@@ -111,10 +117,8 @@ declare module '$env/static/private' {
 	export const VSCODE_INJECTION: string;
 	export const WebStorm: string;
 	export const windir: string;
-	export const WSLENV: string;
-	export const WT_PROFILE_ID: string;
-	export const WT_SESSION: string;
 }
+
 /**
  * Similar to [`$env/static/private`](https://kit.svelte.dev/docs/modules#$env-static-private), except that it only includes environment variables that begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
  * 
@@ -123,10 +127,11 @@ declare module '$env/static/private' {
  * ```ts
  * import { PUBLIC_BASE_URL } from '$env/static/public';
  * ```
-*/
+ */
 declare module '$env/static/public' {
 	
 }
+
 /**
  * This module provides access to runtime environment variables, as defined by the platform you're running on. For example if you're using [`adapter-node`](https://github.com/sveltejs/kit/tree/master/packages/adapter-node) (or running [`vite preview`](https://kit.svelte.dev/docs/cli)), this is equivalent to `process.env`. This module only includes variables that _do not_ begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env).
  * 
@@ -138,7 +143,7 @@ declare module '$env/static/public' {
  * ```
  * 
  * > In `dev`, `$env/dynamic` always includes environment variables from `.env`. In `prod`, this behavior will depend on your adapter.
-*/
+ */
 declare module '$env/dynamic/private' {
 	export const env: {
 		ACSetupSvcPort: string;
@@ -155,6 +160,9 @@ declare module '$env/dynamic/private' {
 		DataSpell: string;
 		DriverData: string;
 		EDITOR: string;
+		EFC_16452: string;
+		FPS_BROWSER_APP_PROFILE_STRING: string;
+		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -192,7 +200,6 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		NPM_PREFIX_NPM_CLI_JS: string;
 		NUMBER_OF_PROCESSORS: string;
-		NVIDIAWHITELISTED: string;
 		OneDrive: string;
 		OneDriveConsumer: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
@@ -212,7 +219,7 @@ declare module '$env/dynamic/private' {
 		PyCharm: string;
 		RlsSvcPort: string;
 		SDK: string;
-		SHIM_MCCOMPAT: string;
+		SESSIONNAME: string;
 		SystemDrive: string;
 		SystemRoot: string;
 		TEMP: string;
@@ -230,13 +237,11 @@ declare module '$env/dynamic/private' {
 		VSCODE_INJECTION: string;
 		WebStorm: string;
 		windir: string;
-		WSLENV: string;
-		WT_PROFILE_ID: string;
-		WT_SESSION: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;
 	}
 }
+
 /**
  * Similar to [`$env/dynamic/private`](https://kit.svelte.dev/docs/modules#$env-dynamic-private), but only includes variables that begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
  * 
@@ -246,7 +251,7 @@ declare module '$env/dynamic/private' {
  * import { env } from '$env/dynamic/public';
  * console.log(env.PUBLIC_DEPLOYMENT_SPECIFIC_VARIABLE);
  * ```
-*/
+ */
 declare module '$env/dynamic/public' {
 	export const env: {
 		[key: `PUBLIC_${string}`]: string | undefined;
