@@ -1,9 +1,5 @@
-
 // this file is generated — do not edit it
-
-
-/// <reference types="@sveltejs/kit" />
-
+/// <reference types = "@sveltejs/kit"/>
 /**
  * Environment variables [loaded by Vite](https://vitejs.dev/guide/env-and-mode.html#env-files) from `.env` files and `process.env`. Like [`$env/dynamic/private`](https://kit.svelte.dev/docs/modules#$env-dynamic-private), this module cannot be imported into client-side code. This module only includes variables that _do not_ begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env).
  * 
@@ -24,7 +20,7 @@
  * ```bash
  * MY_FEATURE_FLAG="enabled" npm run dev
  * ```
- */
+*/
 declare module '$env/static/private' {
 	export const ACSetupSvcPort: string;
 	export const ACSvcPort: string;
@@ -55,6 +51,7 @@ declare module '$env/static/private' {
 	export const NPM_CLI_JS: string;
 	export const npm_command: string;
 	export const npm_config_cache: string;
+	export const npm_config_engine_strict: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_global_prefix: string;
 	export const npm_config_init_module: string;
@@ -64,6 +61,7 @@ declare module '$env/static/private' {
 	export const npm_config_node_gyp: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_prefix: string;
+	export const npm_config_resolution_mode: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_user_agent: string;
 	export const npm_execpath: string;
@@ -71,6 +69,8 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const npm_node_execpath: string;
 	export const npm_package_json: string;
+	export const npm_package_name: string;
+	export const npm_package_version: string;
 	export const NPM_PREFIX_NPM_CLI_JS: string;
 	export const NUMBER_OF_PROCESSORS: string;
 	export const NVIDIAWHITELISTED: string;
@@ -115,7 +115,6 @@ declare module '$env/static/private' {
 	export const WT_PROFILE_ID: string;
 	export const WT_SESSION: string;
 }
-
 /**
  * Similar to [`$env/static/private`](https://kit.svelte.dev/docs/modules#$env-static-private), except that it only includes environment variables that begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
  * 
@@ -124,7 +123,7 @@ declare module '$env/static/private' {
  * ```ts
  * import { PUBLIC_BASE_URL } from '$env/static/public';
  * ```
- */
+*/
 declare module '$env/static/public' {
 	
 }
@@ -140,7 +139,7 @@ declare module '$env/static/public' {
  * ```
  * 
  * > In `dev`, `$env/dynamic` always includes environment variables from `.env`. In `prod`, this behavior will depend on your adapter.
- */
+*/
 declare module '$env/dynamic/private' {
 	export const env: {
 		ACSetupSvcPort: string;
@@ -172,6 +171,7 @@ declare module '$env/dynamic/private' {
 		NPM_CLI_JS: string;
 		npm_command: string;
 		npm_config_cache: string;
+		npm_config_engine_strict: string;
 		npm_config_globalconfig: string;
 		npm_config_global_prefix: string;
 		npm_config_init_module: string;
@@ -181,6 +181,7 @@ declare module '$env/dynamic/private' {
 		npm_config_node_gyp: string;
 		npm_config_noproxy: string;
 		npm_config_prefix: string;
+		npm_config_resolution_mode: string;
 		npm_config_userconfig: string;
 		npm_config_user_agent: string;
 		npm_execpath: string;
@@ -188,6 +189,8 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		npm_node_execpath: string;
 		npm_package_json: string;
+		npm_package_name: string;
+		npm_package_version: string;
 		NPM_PREFIX_NPM_CLI_JS: string;
 		NUMBER_OF_PROCESSORS: string;
 		NVIDIAWHITELISTED: string;
@@ -235,7 +238,6 @@ declare module '$env/dynamic/private' {
 		[key: string]: string | undefined;
 	}
 }
-
 /**
  * Similar to [`$env/dynamic/private`](https://kit.svelte.dev/docs/modules#$env-dynamic-private), but only includes variables that begin with [`config.kit.env.publicPrefix`](https://kit.svelte.dev/docs/configuration#env) (which defaults to `PUBLIC_`), and can therefore safely be exposed to client-side code.
  * 
@@ -245,7 +247,7 @@ declare module '$env/dynamic/private' {
  * import { env } from '$env/dynamic/public';
  * console.log(env.PUBLIC_DEPLOYMENT_SPECIFIC_VARIABLE);
  * ```
- */
+*/
 declare module '$env/dynamic/public' {
 	export const env: {
 		[key: `PUBLIC_${string}`]: string | undefined;
