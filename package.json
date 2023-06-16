@@ -1,7 +1,11 @@
 {
-	"name": "started-with-svelte",
-	"version": "0.0.1",
 	"private": true,
+	"type": "module",
+	"version": "0.0.1",
+	"name": "started-with-svelte",
+	"prisma": {
+		"seed": "npx vite-node prisma/seed.ts"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -27,5 +31,7 @@
 		"vite": "^4.3.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"dependencies": {
+		"@prisma/client": "^4.15.0"
+	}
 }
