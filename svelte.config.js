@@ -1,3 +1,5 @@
+// import {defineConfig} from 'vite';
+// import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 import {vitePreprocess} from '@sveltejs/kit/vite';
 /**@type {import('@sveltejs/kit').Config}*/
@@ -12,3 +14,7 @@ const config = {
 	},
 };
 export default config;
+// export default defineConfig({
+//   plugins: [preprocess()],
+//   $types: './src/types/sveltekit.d.ts',
+// });
