@@ -1,4 +1,4 @@
-<script lang = "ts">
+<script lang="ts">
 	import type {PageData} from "./$types";
 	export let data: PageData;
 	function formDate(date: Date){
@@ -28,7 +28,9 @@
 	<ul>
 		{#each data.posts as {slug, title}}
 			<li>
-				<a href = "/posts/{slug}">{title}</a>
+				<a href = "/posts/{slug}">
+					{title}
+				</a>
 			</li>
 		{/each}
 	</ul>

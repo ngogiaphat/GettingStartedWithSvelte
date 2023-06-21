@@ -1,4 +1,4 @@
-<script lang = "ts">
+<script lang="ts">
 	import type {LayoutData} from './$types';
 	export let data: LayoutData;
 </script>
@@ -11,7 +11,9 @@
 			<ul>
 				{#each data.posts as {slug, title}}
 					<li>
-						<a href = "/posts/{slug}">{title}</a>
+						<a href = "/posts/{slug}">
+							{title}
+						</a>
 					</li>
 				{/each}
 			</ul>
